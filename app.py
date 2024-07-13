@@ -70,7 +70,7 @@ def send_email(recipient):
         error_message = f"Failed to send email to {recipient}. Error: {str(e)}\n{traceback.format_exc()}"
         print(error_message)
         logging.error(error_message)
-        raise send_email.retry(exc=e, countdown=60)  # Retry after 60 seconds
+        raise send_email.retry(exc=e, countdown=50)  # Retry after 50 seconds
     except Exception as e:
         error_message = f"Unexpected error when sending email to {recipient}. Error: {str(e)}\n{traceback.format_exc()}"
         print(error_message)
