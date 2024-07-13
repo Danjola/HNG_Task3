@@ -1,4 +1,3 @@
-import os
 from dotenv import load_dotenv
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -6,6 +5,7 @@ from email.mime.text import MIMEText
 import traceback
 from flask import Flask, request
 from celery import Celery
+import os
 import logging
 from datetime import datetime
 import re
